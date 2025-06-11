@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    layout_width=""
-    layout_height=""
-    />
+
+<!-- res/layout/activity_second.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="16dp">
+
+    <EditText android:id="@+id/etNombres3" android:hint="Nombres"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etApellidos3" android:hint="Apellidos"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etDividendo3" android:hint="Dividendo" android:enabled="true"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etDivisor3" android:hint="Divisor" android:enabled="true"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etNumero3" android:hint="Número" android:enabled="true"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
+
+    <Button android:id="@+id/btnCerrar3" android:text="Cerrar"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
+</LinearLayout>
