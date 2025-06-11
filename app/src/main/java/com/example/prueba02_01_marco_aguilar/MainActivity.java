@@ -38,6 +38,43 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        btnMostrar.setOnClickListener(v -> {
+            try {
+                int dividendo = Integer.parseInt(etDividendo.getText().toString());
+                int divisor = Integer.parseInt(etDivisor.getText().toString());
+
+                int parteEntera = dividendo / divisor;
+                int residuo = dividendo % divisor;
+                String numInvertido = new StringBuilder(String.valueOf(dividendo)).reverse().toString();
+
+                etParteEntera.setText(String.valueOf(parteEntera));
+                etResiduo.setText(String.valueOf(residuo));
+                etNumInvertido.setText(numInvertido);
+            } catch (Exception e) {
+                Toast.makeText(this, "Datos inválidos", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Recibir datos del layout 2
+        Intent i = getIntent();
+        if (i.hasExtra("nombres")) {
+            etNombres.setText(i.getStringExtra("nombres"));
+            etApellidos.setText(i.getStringExtra("apellidos"));
+            etDividendo.setText(i.getStringExtra("dividendo"));
+            etDivisor.setText(i.getStringExtra("divisor"));
+            etNumInvertido.setText(i.getStringExtra("numInvertido"));
+
+            // Desbloquear campos
+            habilitarCampos(true);
+        }
+    }
+
+    private void habilitarCampos(boolean enabled) {
+        etNombres.setEnabled(enabled);
+        etApellidos.setEnabled(enabled);
+        etDividendo.setEnabled(enabled);
+        etDivisor.setEnabled(enabled);
+    }
 
 
 
