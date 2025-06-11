@@ -26,6 +26,21 @@ public class SecondActivity extends AppCompatActivity {
         btnSiguiente = findViewById(R.id.btnSiguiente2);
         btnCerrar = findViewById(R.id.btnCerrar2);
 
+        btnSiguiente.setOnClickListener(v -> {
+            Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+            intent.putExtra("nombres", etNombres.getText().toString());
+            intent.putExtra("apellidos", etApellidos.getText().toString());
+            startActivity(intent);
+        });
 
+        btnCerrar.setOnClickListener(v -> {
+            Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+            intent.putExtra("nombres", etNombres.getText().toString());
+            intent.putExtra("apellidos", etApellidos.getText().toString());
+            intent.putExtra("dividendo", etDividendo.getText().toString());
+            intent.putExtra("divisor", etDivisor.getText().toString());
+            intent.putExtra("numInvertido", etNumero.getText().toString());
+            startActivity(intent);
+        });
     }
 }

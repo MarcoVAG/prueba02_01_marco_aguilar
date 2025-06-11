@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
                 int dividendo = Integer.parseInt(etDividendo.getText().toString());
                 int divisor = Integer.parseInt(etDivisor.getText().toString());
 
+
+
+
                 int parteEntera = dividendo / divisor;
                 int residuo = dividendo % divisor;
                 String numInvertido = new StringBuilder(String.valueOf(dividendo)).reverse().toString();

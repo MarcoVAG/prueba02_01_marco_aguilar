@@ -8,7 +8,12 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <EditText android:id="@+id/etNombres" android:hint="Nombres" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
+    <EditText
+        android:id="@+id/etNombres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:hint="Nombres" />
     <EditText android:id="@+id/etApellidos" android:hint="Apellidos" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
     <EditText android:id="@+id/etDividendo" android:hint="Dividendo" android:inputType="number" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
     <EditText android:id="@+id/etDivisor" android:hint="Divisor" android:inputType="number" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
