@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 int dividendo = Integer.parseInt(etDividendo.getText().toString());
                 int divisor = Integer.parseInt(etDivisor.getText().toString());
+                int numInvertido = Integer.parseInt(etNumInvertido.getText().toString());
 
                 // Verificar que divisor no sea cero
                 if (divisor == 0) {
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 etResiduo.setText(String.valueOf(residuo));
 
                 // Invertir número usando vector y do...while
-                int numero = dividendo;
+                int numero = numInvertido;
                 int[] digitos = new int[10]; // Asumimos que no tendrá más de 10 dígitos
                 int i = 0;
 
