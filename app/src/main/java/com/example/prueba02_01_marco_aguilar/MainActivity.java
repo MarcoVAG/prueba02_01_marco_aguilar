@@ -44,29 +44,29 @@ public class MainActivity extends AppCompatActivity {
                 int divisor = Integer.parseInt(etDivisor.getText().toString());
                 int numInvertido = Integer.parseInt(etNumInvertido.getText().toString());
 
-                // Verificar que divisor no sea cero
                 if (divisor == 0) {
                     Toast.makeText(this, "El divisor no puede ser 0", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                // Calcular parte entera y residuo con sumas/restas
                 int cociente = 0;
                 int acumulador = divisor;
 
-                while (acumulador <= dividendo) {
-                    cociente++;
-                    acumulador += divisor;
+                if (dividendo >= divisor) {
+                    do {
+                        cociente++;
+                        acumulador += divisor;
+                    } while (acumulador <= dividendo);
                 }
 
-                int residuo = dividendo - ((cociente) * divisor);
+                int residuo = dividendo - (cociente * divisor);
 
                 etParteEntera.setText(String.valueOf(cociente));
                 etResiduo.setText(String.valueOf(residuo));
 
-                // Invertir número usando vector y do...while
+                //Numero invertido con vectores
                 int numero = numInvertido;
-                int[] digitos = new int[10]; // Asumimos que no tendrá más de 10 dígitos
+                int[] digitos = new int[10];
                 int i = 0;
 
                 do {
@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Datos inválidos", Toast.LENGTH_SHORT).show();
             }
         });
+
 
 
         // Recibir datos del layout 2

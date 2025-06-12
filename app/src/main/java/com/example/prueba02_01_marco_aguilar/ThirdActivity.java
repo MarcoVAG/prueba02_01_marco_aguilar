@@ -31,8 +31,8 @@ public class ThirdActivity extends AppCompatActivity {
         String nombres = i.getStringExtra("nombres");
         String apellidos = i.getStringExtra("apellidos");
 
-        tvNombres.setText("Nombres: " + nombres);
-        tvApellidos.setText("Apellidos: " + apellidos);
+        tvNombres.setText(nombres);
+        tvApellidos.setText(apellidos);
 
         btnCerrar.setOnClickListener(v -> {
             Intent intent = new Intent(ThirdActivity.this, SecondActivity.class);
