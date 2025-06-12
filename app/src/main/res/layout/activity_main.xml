@@ -11,15 +11,15 @@
     <EditText
         android:id="@+id/etNombres"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:enabled="false"
         android:hint="Nombres" />
-    <EditText android:id="@+id/etApellidos" android:hint="Apellidos" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
-    <EditText android:id="@+id/etDividendo" android:hint="Dividendo" android:inputType="number" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
-    <EditText android:id="@+id/etDivisor" android:hint="Divisor" android:inputType="number" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
-    <EditText android:id="@+id/etParteEntera" android:hint="Parte entera" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
-    <EditText android:id="@+id/etResiduo" android:hint="Residuo" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
-    <EditText android:id="@+id/etNumInvertido" android:hint="Número invertido" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etApellidos" android:hint="Apellidos" android:enabled="false"  android:layout_height="48dp" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etDividendo" android:hint="Dividendo" android:inputType="number" android:enabled="false"  android:layout_height="48dp" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etDivisor" android:hint="Divisor" android:inputType="number" android:enabled="false"  android:layout_height="48dp" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etParteEntera" android:hint="Parte entera" android:enabled="false"  android:layout_height="48dp" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etResiduo" android:hint="Residuo" android:enabled="false"  android:layout_height="48dp" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etNumInvertido" android:hint="Número invertido" android:enabled="false"  android:layout_height="48dp" android:layout_width="match_parent"/>
 
     <Button android:id="@+id/btnSiguiente1" android:text="Siguiente"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
     <Button android:id="@+id/btnMostrarResultados" android:text="Mostrar Resultados"  android:layout_height="wrap_content" android:layout_width="match_parent"/>

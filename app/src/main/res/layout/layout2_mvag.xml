@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- res/layout/activity_second.xml -->
+<!-- res/layout/layout2_mvag.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent" android:padding="16dp">
 
-    <EditText android:id="@+id/etNombres2" android:hint="Nombres"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
-    <EditText android:id="@+id/etApellidos2" android:hint="Apellidos"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
-    <EditText android:id="@+id/etDividendo2" android:hint="Dividendo" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
-    <EditText android:id="@+id/etDivisor2" android:hint="Divisor" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
-    <EditText android:id="@+id/etNumero2" android:hint="Número" android:enabled="false"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etNombres2" android:hint="Nombres"  android:layout_height="48dp" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etApellidos2" android:hint="Apellidos"  android:layout_height="48dp" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etDividendo2" android:hint="Dividendo" android:enabled="false"  android:layout_height="48dp" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etDivisor2" android:hint="Divisor" android:enabled="false"  android:layout_height="48dp" android:layout_width="match_parent"/>
+    <EditText android:id="@+id/etNumero2" android:hint="Número" android:enabled="false"  android:layout_height="48dp" android:layout_width="match_parent"/>
 
     <Button android:id="@+id/btnSiguiente2" android:text="Siguiente"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
     <Button android:id="@+id/btnCerrar2" android:text="Cerrar"  android:layout_height="wrap_content" android:layout_width="match_parent"/>
