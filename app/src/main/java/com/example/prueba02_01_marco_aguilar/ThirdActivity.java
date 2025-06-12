@@ -36,9 +36,11 @@ public class ThirdActivity extends AppCompatActivity {
 
         btnCerrar.setOnClickListener(v -> {
             Intent intent = new Intent(ThirdActivity.this, SecondActivity.class);
+            intent.putExtra("nombres", nombres);
+            intent.putExtra("apellidos", apellidos);
             intent.putExtra("dividendo", etDividendo.getText().toString());
             intent.putExtra("divisor", etDivisor.getText().toString());
-            intent.putExtra("numInvertido", new StringBuilder(etNumero.getText().toString()).reverse().toString());
+            intent.putExtra("numInvertido", etNumero.getText().toString());
             startActivity(intent);
         });
     }

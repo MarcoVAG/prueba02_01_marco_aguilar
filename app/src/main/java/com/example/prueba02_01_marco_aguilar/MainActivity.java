@@ -43,29 +43,49 @@ public class MainActivity extends AppCompatActivity {
                 int dividendo = Integer.parseInt(etDividendo.getText().toString());
                 int divisor = Integer.parseInt(etDivisor.getText().toString());
 
-                int aux = dividendo;
+                // Verificar que divisor no sea cero
+                if (divisor == 0) {
+                    Toast.makeText(this, "El divisor no puede ser 0", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
+                // Calcular parte entera y residuo con sumas/restas
+                int cociente = 0;
+                int acumulador = divisor;
+
+                while (acumulador <= dividendo) {
+                    cociente++;
+                    acumulador += divisor;
+                }
+
+                int residuo = dividendo - ((cociente) * divisor);
+
+                etParteEntera.setText(String.valueOf(cociente));
+                etResiduo.setText(String.valueOf(residuo));
+
+                // Invertir número usando vector y do...while
+                int numero = dividendo;
+                int[] digitos = new int[10]; // Asumimos que no tendrá más de 10 dígitos
                 int i = 0;
 
-                do{
-                    if (dividendo > divisor) {
-                        aux = aux - divisor;
-                        i++;
-                    }
-                }while( i < dividendo);
+                do {
+                    digitos[i] = numero % 10;
+                    numero /= 10;
+                    i++;
+                } while (numero > 0);
 
+                StringBuilder invertido = new StringBuilder();
+                for (int j = 0; j < i; j++) {
+                    invertido.append(digitos[j]);
+                }
 
-                int parteEntera = dividendo / divisor;
-                int residuo = dividendo % divisor;
-                String numInvertido = new StringBuilder(String.valueOf(dividendo)).reverse().toString();
+                etNumInvertido.setText(invertido.toString());
 
-                etParteEntera.setText(String.valueOf(parteEntera));
-                etResiduo.setText(String.valueOf(residuo));
-                etNumInvertido.setText(numInvertido);
             } catch (Exception e) {
                 Toast.makeText(this, "Datos inválidos", Toast.LENGTH_SHORT).show();
             }
         });
+
 
         // Recibir datos del layout 2
         Intent i = getIntent();
