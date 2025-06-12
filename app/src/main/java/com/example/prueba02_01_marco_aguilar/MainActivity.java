@@ -43,7 +43,16 @@ public class MainActivity extends AppCompatActivity {
                 int dividendo = Integer.parseInt(etDividendo.getText().toString());
                 int divisor = Integer.parseInt(etDivisor.getText().toString());
 
+                int aux = dividendo;
 
+                int i = 0;
+
+                do{
+                    if (dividendo > divisor) {
+                        aux = aux - divisor;
+                        i++;
+                    }
+                }while( i < dividendo);
 
 
                 int parteEntera = dividendo / divisor;
